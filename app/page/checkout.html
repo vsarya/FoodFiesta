@@ -1,0 +1,125 @@
+<!-- 
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* Checkout implementation
+*/ -->
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="css/checkout.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<div class="container" ng-controller="DeliveryInfoController"  >
+    <delivery-info 
+        username="username" 
+        deliveryAddress="del_address">  
+    </delivery-info>  
+</div>
+
+<div class="container" ng-controller="finalOrderController">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-5">      
+            <!-- CREDIT CARD FORM STARTS HERE -->
+            <div class="panel panel-default credit-card-box">
+                <div class="panel-heading display-table expand">
+                    <div class="row display-tr" >
+                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <div class="display-td" >                            
+                            <img class="img-responsive pull-right" src="images/accepted_c22e0.png">
+                        </div>
+                    </div>                    
+                </div>
+                <div class="panel-body">
+                    <form role="form" method="POST" action="javascript:void(0);">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input 
+                                            type="text"
+                                            class="form-control"
+                                            name="cardNumber"
+                                            placeholder="16 digit Valid Card Number"
+                                            autocomplete="cc-number"
+                                            required autofocus
+                                            required 
+                                            pattern="[0-9]{16}"
+                                        />
+                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control" 
+                                        name="cardExpiry"
+                                        placeholder="MM/YYYY"
+                                        autocomplete="cc-exp"
+                                        pattern="^((0[1-9])|(1[0-2]))\/((2009)|(20[1-2][0-9]))$"
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CVV</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control"
+                                        name="cardCVC"
+                                        placeholder="CVV"
+                                        autocomplete="cc-csc"
+                                        pattern="[0-9]{3}" 
+                                        required
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
+                        <button class="subscribe btn btn-primary btn-lg " type="submit" ng-click=purchase()>Purchase</button>
+                    </form>
+                </div>
+            </div>            
+            <!-- CREDIT CARD FORM ENDS HERE -->
+            <button class="subscribe btn btn-warning btn-lg" type="button" ng-click=backToMenu()>Back to Menu</button>        
+            <button class="subscribe btn btn-danger btn-lg" type="button" ng-click=clearCart()>Clear Cart</button>
+        </div> 
+        <div class= "col-xs-12 col-md-7">
+            <table class="table"> 
+                <thead>  
+                    <tr>
+                        <th>Item</th>
+                        <th width="15%">Quantity</th>
+                        <th width="15%">Price</th>
+                        <th width="15%">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="(name,value) in orderList" >   
+                        <td>{{name}}</td>
+                        <td>{{value[0]}}</td>
+                        <td>{{value[1]}}</td>
+                        <td>{{formatNumber(value[0]*value[1])}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td align="right"><strong>Total :</strong></td>
+                        <td><strong>${{formatNumber(totalPrice)}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </div>
+</div>

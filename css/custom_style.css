@@ -1,0 +1,90 @@
+
+/* 
+* @author: varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* CSS for entire application
+*/
+
+.list {
+   /*background-color:#fff;
+   border: 1px solid #d4d4d4; */
+   height:120px;
+   margin: 20px;
+   /*position: relative; */
+}
+
+.cardImage {
+    height:50px;width:50px;margin-top:10px;
+}
+.close {
+    font-size:15pt;
+    opacity: 1.0;
+}
+.cardClose {
+    color: white;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+.formDiv {
+    background-color:#eee; 
+    width: 300px;
+    height: 500px;
+}
+.edit {
+    color: blue;
+    background-color: white;
+}
+#bhukkad {
+  background-color: #4B77BE;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  border: 0px;
+}
+#bhukkad a{
+  color: white;
+}
+.address-bar {
+    padding: 1em;
+    background: #89C4F4;
+    color: black;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+.address-bar a {
+    color: black;
+}
+.navbar-custom a{
+    font-size: 1.5em;
+}
+.brand-custom a{
+    font-size: 2em;
+}
+.list-icon {
+    width: 8%;
+    /*height: 30%;*/
+}
+.delivery-info {
+    margin-top: 1em;
+}
+.app-body {
+    padding-right: 0em;
+}
+.restaurant-icon {
+    width: 90%;
+    margin-top: 0px;
+}
+.order-bar{
+    background: #89C4F4;
+    font-size: 1.3em;
+    padding: 0.5em;
+    text-align: center;
+    margin-bottom: 0.75em;
+}
+#checkout-btn {
+    font-size: 1.3em;
+}
+.menu-icon {
+    cursor: pointer;
+}

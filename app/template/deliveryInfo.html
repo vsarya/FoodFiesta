@@ -1,0 +1,16 @@
+<!-- 
+* @author: anan@adobe.cpm
+* @version: 1.0
+* Delivery Info Template implementation
+*/ -->
+<div class="row delivery-info" ng-controller="DeliveryInfoController" >      
+	<div class="container" ng-show="getInfo()">
+    	<div class="address-bar">
+    		<span class="glyphicon glyphicon-home"></span> Deliver to : {{username}}, {{del_address}} 
+    		<a href="#/customer" class="pull-right">
+    			<span class="glyphicon glyphicon-edit "></span>
+    			Change
+    		</a>
+    	</div>
+   	</div>
+ </div>

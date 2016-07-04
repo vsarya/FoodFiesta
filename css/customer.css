@@ -1,0 +1,45 @@
+/*
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+*  CSS for modal
+*/ 
+#myModal{
+  /*position: fixed;
+  top:150px;
+  left: 100px;
+  right: 100px;*/
+  margin-top: 200px; 
+}
+.modal-header, .close {
+  background-color: #4B77BE;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+#modal-body-custom {
+  padding: 28px;
+}
+.nav-brand-custom{
+  color: white !important;
+}
+.modal-backdrop {   
+  opacity: 0 !important;
+}
+.login-bg{
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  border-radius:4px;
+}
+.btn-custom {
+  background-color: #4B77BE;
+  color: white;
+}
+#btn-container {
+  font-size: 1.3em;
+}
+.expand {
+  width: 100%;
+}

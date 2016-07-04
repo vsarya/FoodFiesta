@@ -1,0 +1,38 @@
+<!-- 
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* Modal implementation for username and delivery address
+*/ -->
+
+<div class="login-bg"  ng-controller = "DeliveryInfoController">
+  <div class="modal show modal-custom" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" >
+          <h3><span class="glyphicon glyphicon-cutlery"></span>  FoodFiesta</h3>
+        </div>
+        <div class="modal-body" id="modal-body-custom">
+          <form role="form">
+            <div class="form-group">
+              <label for="username"><span class="glyphicon glyphicon-user"></span> Your Name</label>
+              <input type="text" class="form-control" ng-model="username" required placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="del_ad"><span class="glyphicon glyphicon-envelope"></span> Address</label>
+              <input type="text" class="form-control" ng-model ="del_address" required placeholder="Enter delivery address">
+            </div>
+            <button type="submit" ng-click="setInfo();" class="btn btn-block btn-custom" id="btn-container"><span class="glyphicon glyphicon-list"></span> List Restaurants</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $("#myModal").modal();
+  });
+
+</script>

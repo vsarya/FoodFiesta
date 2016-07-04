@@ -1,0 +1,71 @@
+<!-- 
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* Module for using Menu of Restaurant for placing order 
+*/ -->
+<div class="container" ng-controller="DeliveryInfoController">
+  <delivery-info 
+    username="username" 
+    deliveryAddress="del_address">
+  </delivery-info>  
+</div>
+
+<div class="container">
+  <div ng-controller="MenuController" class="flex-container complete-parent">
+    <div class="col-md-12">
+      <div><h3>{{restaurantDetail.name}}</h3></div>
+      <div><h4>{{restaurantDetail.description}}</h4></div>
+    </div>
+
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <div class="row">
+          <thead>
+            <th>Menu</th>
+            <th>Price($)</th>
+            <th>Add</th>
+          </thead> 
+        </div>
+        <tbody>
+          <tr ng-repeat="menuItem in restaurantDetail.menuItems">
+            <td>{{menuItem.name}} </td>
+            <td>{{menuItem.price}}</td>
+            <td><span class="glyphicon glyphicon-plus menu-icon" ng-click="addItem(menuItem)"></span></td>
+          </tr>      
+        </tbody>
+      </table>      
+    </div>
+
+    <div class="col-md-6">
+      <div class="order-bar">
+        Cart
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+          <th>Item</th>
+          <th width="20%">Quantity</th>
+          <th width="15%">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat=" menuItem in restaurantDetail.menuItems" ng-if="orderList[menuItem.name][0]>0" class="">  
+            <td>{{menuItem.name}}</td>
+            <td>
+              <span class="glyphicon glyphicon glyphicon-triangle-left menu-icon" ng-if="orderList[menuItem.name][0]>0" ng-click="deleteItem(menuItem)"></span>
+                {{orderList[menuItem.name][0]}} 
+              <span class="glyphicon glyphicon glyphicon-triangle-right menu-icon" ng-click="addItem(menuItem)"></span> 
+            </td>
+            <td>{{menuItem.price}}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td align="right"><strong>Total :</strong></td>
+            <td><strong>${{formatNumber(totalPrice)}}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary pull-right" id="checkout-btn" ng-click=checkout()>Checkout</button>
+    </div>
+  </div>
+</div>

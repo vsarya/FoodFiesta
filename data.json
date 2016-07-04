@@ -1,0 +1,179 @@
+{
+	"restaurants":[{
+	"menuItems": [{
+		"name": "Chicken Manchow Soup",
+		"price": 5.95
+	}, {
+		"name": "Lung Fung Veg Soup",
+		"price": 5.95
+	}, {
+		"name": "Chicken Dimsum",
+		"price": 6.95
+	}, {
+		"name": "Veg Dimsum",
+		"price": 5.33
+	}, {
+		"name": "Pan Fried Chinese Green",
+		"price": 6.95
+	}, {
+		"name": "Exotic Veg Ginger Chilli",
+		"price": 9.5
+	}, {
+		"name": "Paneer Masaladar",
+		"price": 5.95
+	}, {
+		"name": "Veg Fried Rice",
+		"price": 5.95
+	}, {
+		"name": "Tripple Pepper Noodles",
+		"price": 5.95
+	}, {
+		"name": "Curd Rice",
+		"price": 6.95
+	}, {
+		"name": "Bluberry Cheese cake",
+		"price": 7.55
+	}, {
+		"name": "Walnut Brownie",
+		"price": 4.55
+	}, {
+		"name": "Jalebi",
+		"price": 5.95
+	}],
+	"price": 4,
+	"rating": 5,
+	"id": "chutneychang",
+	"name": "Chutney Chang",
+	"cuisine": "chinese",
+	"opens": "18:30:00",
+	"closes": "23:30:00",
+	"location": "Museum Road, Bangalore – 560001, Karnataka",
+	"description": "Chinese and Indian food the way you like it. Fast, fresh, grilled."
+},
+{
+	"menuItems": [{
+		"name": "Aloo Gobi",
+		"price": 5.95
+	}, {
+		"name": "Basmati rice",
+		"price": 6.95
+	}, {
+		"name": "Butter Chicken",
+		"price": 5.95
+	}, {
+		"name": "Chicken Korma",
+		"price": 7.55
+	}, {
+		"name": "Chicken Tikka Masala",
+		"price": 5.95
+	}, {
+		"name": "Gulab Jamun",
+		"price": 8.95
+	}, {
+		"name": "Kheer",
+		"price": 4.5
+	}, {
+		"name": "Lamb Asparagus",
+		"price": 9.5
+	}, {
+		"name": "Lamb Vindaloo",
+		"price": 7.95
+	}, {
+		"name": "Mix Grill Bombay",
+		"price": 5.95
+	}, {
+		"name": "Mulligatawny soup",
+		"price": 5.95
+	}, {
+		"name": "Murgh Chicken",
+		"price": 3.95
+	}, {
+		"name": "Naan stuffed with spinach and lamb",
+		"price": 4.55
+	}, {
+		"name": "Plain naan",
+		"price": 5.95
+	}, {
+		"name": "Rogan Josh",
+		"price": 5.95
+	}, {
+		"name": "Saag Paneer",
+		"price": 5.95
+	}, {
+		"name": "Tandoori Chicken",
+		"price": 4.95
+	}],
+	"price": 4,
+	"rating": 3,
+	"id": "curryup",
+	"name": "Curry Up",
+	"cuisine": "indian",
+	"opens": "17:00:00",
+	"closes": "22:00:00",
+	"location": "Brigade Road, Bangalore",
+	"description": "Indian food with a modern twist. We use all-natural ingredients and the finest spices to delight and tempt your palate."
+}, {
+	"menuItems": [{
+		"name": "Aloo Gobi",
+		"price": 5.95
+	}, {
+		"name": "Basmati rice",
+		"price": 6.95
+	}, {
+		"name": "Butter Chicken",
+		"price": 5.95
+	}, {
+		"name": "Chicken Korma",
+		"price": 7.55
+	}, {
+		"name": "Chicken Tikka Masala",
+		"price": 5.95
+	}, {
+		"name": "Gulab Jamun",
+		"price": 8.95
+	}, {
+		"name": "Kheer",
+		"price": 4.5
+	}, {
+		"name": "Lamb Asparagus",
+		"price": 9.5
+	}, {
+		"name": "Lamb Vindaloo",
+		"price": 7.95
+	}, {
+		"name": "Mix Grill Bombay",
+		"price": 5.95
+	}, {
+		"name": "Mulligatawny soup",
+		"price": 5.95
+	}, {
+		"name": "Murgh Chicken",
+		"price": 3.95
+	}, {
+		"name": "Naan stuffed with spinach and lamb",
+		"price": 4.55
+	}, {
+		"name": "Plain naan",
+		"price": 5.95
+	}, {
+		"name": "Rogan Josh",
+		"price": 5.95
+	}, {
+		"name": "Saag Paneer",
+		"price": 5.95
+	}, {
+		"name": "Tandoori Chicken",
+		"price": 4.95
+	}],
+	"price": 5,
+	"rating": 5,
+	"id": "punjab-grill",
+	"name": "Punjabi Grill",
+	"cuisine": "indian",
+	"opens": "17:00:00",
+	"closes": "22:00:00",
+	"location": "Koramangala, Bangalore",
+	"description": "Indian food with a modern twist. We use all-natural ingredients and the finest spices to delight and tempt your palate."
+}
+]
+}

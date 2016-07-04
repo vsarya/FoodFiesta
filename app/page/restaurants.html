@@ -1,0 +1,61 @@
+<!-- 
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* Module for retrieval of restaurants
+*/ -->
+<div class="row" ng-controller="DeliveryInfoController"  >
+  <delivery-info 
+    username="username" 
+    deliveryAddress="del_address">
+  </delivery-info>  
+</div>
+
+<div class="container">
+  <div class="container col-md-3 col-xs-12"  ng-controller="RestaurantController">
+    <form class="">
+      <div class="">
+        <h4 class="">Filter Restaurants</h4>
+        <div ng-repeat="cuisine in cuisines">
+        <input type="checkbox" ng-model='restaurant.cuisines' ng-click="includeCuisine(cuisine); filterRestaurants()"> 
+        <label>{{cuisine[0].toUpperCase()}}{{cuisine.substr(1)}}</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container col-md-9 col-xs-12" ng-controller="RestaurantListController">
+      <h3>{{restaurants.length}} restaurants found</h3>
+      <table class="table table-striped">
+        <div>
+        <thead>
+        <tr>
+          <th></th>
+          <th>
+            <a href="#/" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+              Name
+              <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </th>
+          <th>
+            <a href="#/"  ng-click="sortType = 'rating'; sortReverse = !sortReverse" style="">
+                 Rating    
+             <span ng-show="sortType == 'rating' && !sortReverse" class="fa fa-caret-down"></span>
+             <span ng-show="sortType == 'rating' && sortReverse" class="fa fa-caret-up"></span>
+           </a>
+          </th>
+        </tr>
+        </thead>
+        </div>
+        <tr ng-repeat="restaurant in restaurants | orderBy:sortType:sortReverse">
+        <td width="15%"><a href="#/menu/{{restaurant.id}}"><img class="restaurant-icon" src="images/food.png"></a></td>
+          <td>
+            <a  href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a><br>
+            {{restaurant.description}}
+          </td>
+          <td width="15%">
+            <span data-ng-repeat="i in range(1,restaurant.rating)" class="glyphicon glyphicon-star" ></span>
+          </td>
+      </tr>
+      </table>
+  </div>
+</div>

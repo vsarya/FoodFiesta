@@ -1,0 +1,44 @@
+<!-- 
+* @author: anan@adobe.cpm, varya@adobe.com, shsinha@adobe.com 
+* @version: 1.0
+* Index page of the app
+*/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/customer.css">
+    <link rel="stylesheet" type="text/css" href="css/custom_style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script> <!-- routing  -->
+    <script type="text/javascript" src="js/angular-cookies.js"></script> <!-- not included in main js cz this is device idependeent in mobile not necessary storage in cookies-->
+
+    <script type="text/javascript" src="app/directive/userinfo.drv.js"></script>
+    <script type="text/javascript" src="app/service/foodfiesta.srv.js"></script>
+    <script type="text/javascript" src="app/controller/foodfiesta.ctrl.js"></script>
+    <script type="text/javascript" src="app/config/main.cfg.js"></script>
+
+</head>
+<body  ng-app="main_module" id="app-body">
+  <nav class="navbar navbar-default well navbar-custom" id="bhukkad">
+    <div class="container-fluid container">
+        <div class="navbar-header brand-custom">
+          <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-cutlery"></span> FoodFiesta</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a href="#/"><span class="glyphicon glyphicon-question-sign"></span> How</a></li>
+          <li><a href="#/"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
+        </ul>
+     </div>
+  </nav>    
+  <div class="">
+      <div ng-view></div>
+  </div>
+</body>
+</html>
+
